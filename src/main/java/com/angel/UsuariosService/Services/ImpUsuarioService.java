@@ -22,8 +22,9 @@ public class ImpUsuarioService implements  IUsuarioService{
     }
 
     @Override
-    public void crearUsuario(Usuario newUser) {
+    public String crearUsuario(Usuario newUser) {
         usuariosRepo.save(newUser);
+        return "Usuario creado correctamente";
     }
 
     @Override

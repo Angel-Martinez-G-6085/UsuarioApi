@@ -20,8 +20,8 @@ public class UsuarioController {
         return usuarioservicio.getUsuarioById(id);
     }
     @PostMapping("/crear")
-    public void guardarUsuario(@RequestBody Usuario nuevoUsuaeio) {
-        usuarioservicio.crearUsuario(nuevoUsuaeio);
+    public String guardarUsuario(@RequestBody Usuario nuevoUsuaeio) {
+        return usuarioservicio.crearUsuario(nuevoUsuaeio);
     }
     @PutMapping("/editar/{id}")
     public String editUsuario(@PathVariable Long id, @RequestBody Usuario nuevoUsuario) {
